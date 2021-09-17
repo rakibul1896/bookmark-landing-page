@@ -1,0 +1,167 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
+
+//* Height
+// add values
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "height":
+      map-merge(
+        map-get($utilities, "height"),
+        (
+          values:
+            map-merge(
+              map-get($utilities, "height", "values"),
+              (
+                p76: 76%,
+              )
+            ),
+            responsive: true,
+        )
+      ),
+  )
+);
+
+//* width
+// add values
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "width":
+      map-merge(
+        map-get($utilities, "width"),
+        (
+          values:
+            map-merge(
+              map-get($utilities, "width", "values"),
+              (
+                p120: 120%,
+              )
+            ),
+            responsive: true,
+        )
+      ),
+  )
+);
+
+//* background-color
+// add hover effect
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "background-color":
+      map-merge(
+        map-get($utilities, "background-color"),
+        (
+          state: hover,
+        )
+      ),
+  )
+);
+
+//* color
+// add hover effect
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color":
+      map-merge(
+        map-get($utilities, "color"),
+        (
+          state: hover,
+        )
+      ),
+  )
+);
+
+//* position
+// class modified
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "position":
+      map-merge(
+        map-get($utilities, "position"),
+        (
+          class: p,
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "top":
+      map-merge(
+        map-get($utilities, "top"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "bottom":
+      map-merge(
+        map-get($utilities, "bottom"),
+        (
+          responsive: true,
+        )
+      ),
+  )
+);
+
+
+
+//* border-radius start
+// add values
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-start":
+      map-merge(
+        map-get($utilities, "rounded-start"),
+        (
+          values:
+            map-merge(
+              map-get($utilities, "rounded-start", "values"),
+              (
+                50: 50rem,
+              )
+            ),
+        )
+      ),
+  )
+);
+
+//* z-index
+// recently added
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "z-index": (
+      property: z-index,
+      class: z,
+      values: (
+        n1: -1,
+        100: 100,
+
+      ),
+    ),
+  )
+);
+
+@debug map-get($utilities, "height");
