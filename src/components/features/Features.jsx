@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Tabs, Tab } from "react-bootstrap";
+import { Tab, Row, Col, Nav } from "react-bootstrap";
 
 const Features = () => {
   return (
@@ -12,23 +12,49 @@ const Features = () => {
           them on the go.
         </p>
       </div>
-      <Container className='pt-5'>
-        <Tabs >
-          <Tab eventKey="simple-bookmarking" title="Simple Bookmarking">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam beatae
-            at blanditiis repudiandae ea, ipsum est asperiores voluptatem
-            repellat officia.
-          </Tab>
-          <Tab eventKey="speedy-searching" title="Speedy Searching">
-            New content is here. so no need to be worry, i will be there in 10 minutes.
-          </Tab>
-          <Tab eventKey="easy-sharing" title="Easy Sharing">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam beatae
-            at blanditiis repudiandae ea, ipsum est asperiores voluptatem
-            repellat officia.
-          </Tab>
-        </Tabs>
-      </Container>
+      <div className="pt-5">
+        <Tab.Container
+          id="left-tabs-example"
+          defaultActiveKey="simple-bookmarking"
+        >
+          <Row>
+            <Col sm={8} className='mx-auto'>
+              <Nav variant="pills" className="justify-content-center">
+                <Nav.Item>
+                  <Nav.Link eventKey="simple-bookmarking">
+                    Simple Bookmarking
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="speedy-searching">
+                    Speedy Searching
+                  </Nav.Link>
+                </Nav.Item>
+                <Nav.Item>
+                  <Nav.Link eventKey="easy-sharing">Easy Sharing</Nav.Link>
+                </Nav.Item>
+              </Nav>
+            </Col>
+            <Col sm={10} className='mx-auto mt-5'>
+              <Tab.Content>
+                <Tab.Pane eventKey="simple-bookmarking">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+                  beatae at blanditiis repudiandae ea, ipsum est asperiores
+                  voluptatem repellat officia.
+                </Tab.Pane>
+                <Tab.Pane eventKey="speedy-searching">
+                  New content is here. so no need to be worry, i will be there
+                  in 10 minutes.
+                </Tab.Pane>
+                <Tab.Pane eventKey="easy-sharing">
+                  content is here. so no need to be worry, i will be there in 10
+                  minutes.
+                </Tab.Pane>
+              </Tab.Content>
+            </Col>
+          </Row>
+        </Tab.Container>
+      </div>
     </div>
   );
 };
