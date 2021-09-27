@@ -6,7 +6,7 @@ import './sass/custom.scss';
 
 function App() {
   return (
-    <div className="App">
+    <div className="overflow-hidden select-text">
       <Header />
       <Features/>
     </div>

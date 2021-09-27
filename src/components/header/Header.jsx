@@ -21,7 +21,7 @@ const Header = () => {
         </div>
         <div className="p-relative image w-100 w-md-50 pb-2 mb-5 mb-md-0">
           <img src={hero} alt="Pc screen" className="w-100"/>
-          <Background/>
+          <Background boolean={true}/>
         </div>
       </Container>
       

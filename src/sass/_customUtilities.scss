@@ -19,7 +19,7 @@ $utilities: map-merge(
                 p76: 76%,
               )
             ),
-            responsive: true,
+          responsive: true,
         )
       ),
   )
@@ -43,7 +43,7 @@ $utilities: map-merge(
                 80: 80%,
               )
             ),
-            responsive: true,
+          responsive: true,
         )
       ),
   )
@@ -65,8 +65,6 @@ $utilities: map-merge(
   )
 );
 
-
-
 //! color
 // add hover effect
 
@@ -82,8 +80,6 @@ $utilities: map-merge(
       ),
   )
 );
-
-
 
 //! position
 // class modified
@@ -127,8 +123,6 @@ $utilities: map-merge(
   )
 );
 
-
-
 //! border-radius start
 // add values
 
@@ -151,7 +145,27 @@ $utilities: map-merge(
   )
 );
 
+//! border-radius start
+// add values
 
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded-end":
+      map-merge(
+        map-get($utilities, "rounded-end"),
+        (
+          values:
+            map-merge(
+              map-get($utilities, "rounded-end", "values"),
+              (
+                50: 50rem,
+              )
+            ),
+        )
+      ),
+  )
+);
 
 //! z-index
 // recently added
@@ -165,8 +179,33 @@ $utilities: map-merge(
       values: (
         n1: -1,
         100: 100,
-
       ),
+    ),
+  )
+);
+
+//! user-select
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "user-selected": (
+      property: user-select,
+      class: select,
+      values: all auto none text,
+    ),
+  )
+);
+
+//! cursor
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      values: pointer text,
     ),
   )
 );
