@@ -96,7 +96,7 @@ const Features = () => {
                           />
                           <Background boolean={false} />
                         </Col>
-                        <Col md={6}>
+                        <Col md={6} className='p-md-4'>
                           <h3 className="pb-2">{val.header}</h3>
                           <p>{val.para}</p>
                           <Button
