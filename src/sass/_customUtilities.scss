@@ -17,6 +17,8 @@ $utilities: map-merge(
               map-get($utilities, "height", "values"),
               (
                 p76: 76%,
+                2px: 2px,
+                30px: 30px,
               )
             ),
           responsive: true,
@@ -41,6 +43,7 @@ $utilities: map-merge(
               (
                 p120: 120%,
                 80: 80%,
+                2px: 2px,
               )
             ),
           responsive: true,
@@ -123,6 +126,28 @@ $utilities: map-merge(
   )
 );
 
+
+//! border-radius 
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "rounded":
+      map-merge(
+        map-get($utilities, "rounded"),
+        (
+          values:
+            map-merge(
+              map-get($utilities, "rounded", "values"),
+              (
+                4: 1rem,
+              )
+            ),
+        )
+      ),
+  )
+);
+
 //! border-radius start
 // add values
 
@@ -145,7 +170,7 @@ $utilities: map-merge(
   )
 );
 
-//! border-radius start
+//! border-radius end
 // add values
 
 $utilities: map-merge(
