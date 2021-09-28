@@ -62,7 +62,6 @@ $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075);
 
 //* Custom Css
 
-
 .tabs .nav-link.active {
   border-bottom: 2px solid $secondary !important;
 }
@@ -71,3 +70,21 @@ p {
   color: $success;
 }
 
+.accordion button {
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #000 !important;
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  border-color: #fff !important;
+  box-shadow: none !important;
+}
+
+.accordion-flush .accordion-item:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+}

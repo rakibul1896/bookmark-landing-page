@@ -236,3 +236,19 @@ $utilities: map-merge(
 );
 
 
+//! box-shadow
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "shadow":
+      map-merge(
+        map-get($utilities, "shadow"),
+        (
+          state: focus,
+        )
+      ),
+  )
+);
+
+@debug map-get($utilities, "shadow");
