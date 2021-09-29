@@ -45,16 +45,16 @@ const DownloadExtension = () => {
               sm={6}
               md={4}
               lg={3}
-              className={`shadow rounded-4 p-0 pb-4 mx-3 mt-5 mt-md-${val.top}`}
+              className={`shadow rounded-4 p-0 pb-4 mx-4 mt-5 mt-xl-${val.top}`}
               key={ind}
             >
               <img src={val.img} alt="" className="py-5" />
               <h5>{val.header}</h5>
               <p>{val.para}</p>
               <div className="overflow-hidden h-30px w-100 my-3">
-                {[...Array(100).keys()].map(() => {
+                {[...Array(100).keys()].map((val) => {
                   return (
-                    <div className="bg-success h-2px w-2px d-inline-block  m-2"></div>
+                    <div className="bg-success h-2px w-2px d-inline-block  m-2" key={val}></div>
                   );
                 })}
               </div>
