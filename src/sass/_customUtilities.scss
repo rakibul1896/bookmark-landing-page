@@ -251,4 +251,18 @@ $utilities: map-merge(
   )
 );
 
-@debug map-get($utilities, "shadow");
+
+//! letter-spacing
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "letter-spacing": (
+      property: letter-spacing,
+      class: LSpace,
+      values:  map-merge($spacers, (auto: auto)),
+    ),
+  )
+);
+
+@debug map-get($utilities, "letter-spacing");
