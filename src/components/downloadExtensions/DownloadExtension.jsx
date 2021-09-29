@@ -52,9 +52,9 @@ const DownloadExtension = () => {
               <h5>{val.header}</h5>
               <p>{val.para}</p>
               <div className="overflow-hidden h-30px w-100 my-3">
-                {[...Array(100).keys()].map(() => {
+                {[...Array(100).keys()].map((val) => {
                   return (
-                    <div className="bg-success h-2px w-2px d-inline-block  m-2"></div>
+                    <div className="bg-success h-2px w-2px d-inline-block  m-2" key={val}></div>
                   );
                 })}
               </div>
